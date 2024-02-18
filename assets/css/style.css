@@ -1,0 +1,97 @@
+body{
+    background-color: darkmagenta;
+}
+
+.backdrop{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    animation: fade-In .4s ease-in;
+}
+
+.backdrop.visible{
+    display: block;
+}
+
+.exitBtn{
+    cursor: pointer;
+}
+
+.movieCard{
+    margin: 20px;
+    width: 300px;
+}
+
+.movieCard .card-header{
+    width: 100%;
+    height: 90px;
+}
+.movieCard h3{
+    text-transform: capitalize;
+}
+
+.movieCard small{
+    padding-top: 10px;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.movieCard .card-body{
+    height: 250px;
+    width: 100%;
+}
+
+.movieCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieModal{
+    width: 60%;
+    position: fixed;
+    left: 20%;
+    top: 25vh;
+    display: none;
+    animation: fade-slide-down .4s ease-in;
+}
+
+.movieModal.visible{
+    display: block;
+}
+
+@keyframes fade-In{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-slide-down{
+    0%{
+        margin-top: -60%;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+.loader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.8);
+}
